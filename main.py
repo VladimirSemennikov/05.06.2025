@@ -52,12 +52,46 @@ delattr - удаление атрибута
 #
 # print(id_1.__dict__)
 
-file = {'name':'Alex', 'age':18, 'hobby':'films'}
+# file = {'name':'Alex', 'age':18, 'hobby':'films'}
+# class Person:
+#     pass
+# id_1 = Person()
+# for key, value in file.items():             #через цикл записали все ключ+значение
+#     setattr(id_1, key, value)
+# print(id_1.hobby)
+# print(id_1.__dict__)
+# print(id_1.name)                        #обращаемся к ключу и получаем значение
+
+
+# class Person:
+#     pass
+# id_1 = Person()                             #создали экземпляр
+# setattr(id_1,"name", "Vasya")
+# setattr(id_1,"name", "Masha")
+# print(id_1.name)
+# print(id_1.__dict__)
+
+# class Person:
+#     setup = ['set_name', 'set_age', 'set_work', 'set_study']
+# id_1 = Person()
+# for i in Person.setup:
+#     setattr(id_1,i,input())
+# print(id_1.__dict__)
+#
+# #2 способ
+# for attribute in id_1.setup:
+#     value = input()
+#     setattr(id_1, attribute, value)
+# print(id_1.__dict__)
+#
+# #получение значения(проверка)
+# for value in id_1.setup:
+#     print(getattr(id_1,value))              #получаем значение атрибута
+
+#getattr
+
 class Person:
-    pass
-id_1 = Person()
-for key, value in file.items():             #через цикл записали все ключ+значение
-    setattr(id_1, key, value)
-print(id_1.hobby)
-print(id_1.__dict__)
-print(id_1.name)                        #обращаемся к ключу и получаем значение
+    name = 'Вася'
+    age = 14
+person_1 = Person()
+print(getattr(person_1, 'name', False))
