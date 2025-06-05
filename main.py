@@ -99,10 +99,73 @@ delattr - удаление атрибута
 # print(getattr(person_1, 'birth'))               #нету 3 значения и будет ошибка
 
 
-file = ['name', 'age', 'hobby', 'lolo']
-class Person:
-    hobby = 'films'
+# file = ['name', 'age', 'hobby', 'lolo']
+# class Person:
+#     hobby = 'films'
+#
+# for value in file:
+#     if getattr(Person, value, False):
+#         print(value)
 
-for value in file:
-    if getattr(Person, value, False):
-        print(value)
+# Masha Prosto Kvasha Мы любим тебя --- проверяем правильно ли
+# class Person:
+#     name1= 'Masha'
+#     name2= 'Prosto'
+#     name3= 'Kvasha'
+# list_person = []
+# file = ['name1','name2','name3','name4']
+# for value in file:
+#     list_person.append(getattr(Person, value, 'Мы любим тебя'))
+# print(list_person)
+
+# class Person:
+#     dance = ['nnn', 'mmm', 'ccc']
+#
+# id_1 = Person()
+# for value in id_1.dance:
+#     if getattr(Person, value, True):
+#         print(value)
+#
+#
+# list_person = ['hobby', 'work', 'study']
+# class Person:
+#     hobby = 'dance'
+#     work = 'design'
+#     study = 'collage'
+# id_1 = Person()
+#
+# print(getattr(id_1,'hobby'))
+# print(getattr(id_1,'work'))
+# print(getattr(id_1,'study'))
+
+# from random import sample
+# magic_ing = ['вино', 'вода', 'масло', 'вишня', 'творог', 'колбаса']
+# class Magic:
+#     ingredients = sample(magic_ing,3)
+# my_cocktail = Magic()
+# for value in my_cocktail.ingredients:
+#     getattr(my_cocktail, 'ingredients')
+#     print(value)
+# print('Спасибо, Машенька')
+
+
+#hasattr
+
+# class Person:
+#     name = 'Vasya'
+# id_1 = Person()
+# print(hasattr(Person, 'name'))                      #True
+# print(hasattr(id_1, 'name'))                        #True
+# print(hasattr(id_1, 'age'))                         #False
+
+class Pokemon:
+    pass
+pokemons = Pokemon()
+setattr(pokemons,"pikachu", "")
+setattr(pokemons,"scyther", "")
+setattr(pokemons,"gyarados", "")
+setattr(pokemons,"gengar", "")
+
+print(hasattr(pokemons,'lapras'))
+print(hasattr(pokemons,'pikachu'))
+print(hasattr(pokemons,'alakazam'))
