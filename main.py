@@ -90,8 +90,19 @@ delattr - удаление атрибута
 
 #getattr
 
+# class Person:
+#     name = 'Вася'
+#     age = 14
+# person_1 = Person()
+# print(getattr(person_1, 'name', False))
+# print(getattr(person_1, 'birth', 'Нет атрибута'))
+# print(getattr(person_1, 'birth'))               #нету 3 значения и будет ошибка
+
+
+file = ['name', 'age', 'hobby', 'lolo']
 class Person:
-    name = 'Вася'
-    age = 14
-person_1 = Person()
-print(getattr(person_1, 'name', False))
+    hobby = 'films'
+
+for value in file:
+    if getattr(Person, value, False):
+        print(value)
